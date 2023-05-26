@@ -115,7 +115,7 @@ const cardArray = [
 
 cardArray.sort(() => 0.5 - Math.random());
 
-const overlay =	document.querySelector(".overlay");
+const overlay = document.querySelector(".overlay");
 const gridDisplay = document.querySelector("#grid");
 const result = document.querySelector("#result");
 let cardChosen = [];
@@ -139,7 +139,7 @@ function flipCard() {
 	this.classList.add("flipped");
 	this.setAttribute("src", cardArray[cardId].img);
 	if (cardChosen.length === 2) {
-		setTimeout(checkMatche, 550);
+		setTimeout(checkMatche, 1000);
 		this.classList.remove("flipped");
 	}
 }
@@ -173,5 +173,4 @@ function checkMatche() {
 }
 const showModelWindow = () => {
 	overlay.style.display = "flex";
-
-}
+};
